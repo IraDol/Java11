@@ -11,7 +11,8 @@ public class Movie {    // класс описывает одну строку
         this.genre = genre;
         this.id = id;
     }
-    public Movie (){
+
+    public Movie() {
     }
 
 
