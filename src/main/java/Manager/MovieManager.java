@@ -42,16 +42,13 @@ public class MovieManager {
         // Потом вычислить длину результирующего массива,
         // создать нов результирующий массив в обратном порядке
 
-        Movie[] movies = findAll();       // ???
-        int resultLength = 0;
-        boolean isLimited = true;
+        Movie[] movies = findAll();
+        int resultLength;
+        boolean isLimited = this.limit < findAll().length;
 
-        resultLength = isLimited ? limit : 10;
+        resultLength = isLimited ? this.limit : findAll().length;
 
-        // if (isLimited) {
-        //     resultLength = limit;
-        // } else
-        //     resultLength = 10;
+
         Movie[] result = new Movie[resultLength];
         for (int i = 0; i < resultLength; i++) {
             int index = movies.length - i - 1;

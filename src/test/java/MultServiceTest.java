@@ -100,4 +100,21 @@ public class MultServiceTest {
 
 
     }
+
+    @Test
+    public void findAllUnderLimit() {
+        MovieManager movies = new MovieManager(5);
+        movies.add(first);
+        movies.add(second);
+        movies.add(third);
+
+        movies.findLast();
+
+        Movie[] actual = movies.findLast();
+        Movie[] expected = {third, second, first};
+
+        Assertions.assertArrayEquals(actual, expected);
+
+
+    }
 }
