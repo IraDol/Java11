@@ -36,24 +36,6 @@ public class MultServiceTest {
     }
 
     @Test
-    public void addEmptyField() {
-        MovieManager movies = new MovieManager();
-
-        // тестируемое действие
-
-        movies.add(first);
-        movies.add(fifth);
-
-        Movie[] actual = movies.findAll();
-
-        Movie[] expected = {first, fifth};
-
-        Assertions.assertArrayEquals(actual, expected);
-
-
-    }
-
-    @Test
     public void findAllTest() {
         MovieManager movies = new MovieManager();
         movies.add(first);
